@@ -3,6 +3,8 @@ import React from "react"
 import { useCallback } from "react"
 import toast from "react-hot-toast"
 
+import { motion } from "framer-motion"
+
 type Props = {
   text: string
 }
@@ -11,16 +13,21 @@ export default function Char({ text }: Props) {
   const copyChar = useCallback(() => {
     navigator.clipboard.writeText(text)
     toast.success('Copied "' + text + '" to clipboard 🏴')
-  }, [])
+  }, [text])
 
   return (
-    <div
+    <motion.div
+      whileHover={{ backgroundColor: "#000", color: "#fff" }}
+      // whileTap={{ backgroundColor: "#111" }}
+      transition={{ ease: [0, 1.14, 1, 1] }}
       onClick={copyChar}
-      className="h-16 w-16 cursor-pointer group flex items-center justify-center border border-gray-50"
+      style={{ backgroundColor: "#fff", color: "#000" }}
+      // style={{ height: "var(--icon-size)", width: "var(--icon-size)" }}
+      className="cursor-pointer group char flex items-center justify-center "
     >
-      <span className={"text-md group-hover:scale-150 transition-transform duration-100 ease-in-out transform"}>
+      <span style={{ fontSize: "2rem" }} className={"text-md select-none"}>
         {text}
       </span>
-    </div>
+    </motion.div>
   )
 }

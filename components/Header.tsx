@@ -77,7 +77,7 @@ export default function Header({}: Props) {
         </Marquee>
       </div>
       <div className="flex z-20 items-center h-full justify-center">
-        <h1 className="text-white z-20 text-[82px]">Glyph.gallery</h1>
+        <h1 className="text-white z-20 text-[82px] font-neuemontreal">Glyph.gallery</h1>
       </div>
       <Image
         src={headerSrc}

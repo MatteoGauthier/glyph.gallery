@@ -6,51 +6,60 @@ import { characters } from "../utils/constants"
 
 type Font = {
   name: string
-  tw: string
+  style: string
 }
 
 const availableFonts: Font[] = [
   {
     name: "Inter",
-    tw: "font-inter",
+    style: `'Inter', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
   },
   {
     name: "Default System",
-    tw: "font-[system-ui]",
+    style: "system-ui",
   },
   {
     name: "Sans Serif (Default)",
-    tw: "font-[sans-serif]",
+    style: "sans-serif",
   },
   {
     name: "Serif (system)",
-    tw: "font-[serif]",
+    style: "serif",
   },
-
   {
     name: "Mono (system)",
-    tw: "font-[monospace]",
+    style: "monospace",
   },
 ]
 
+const avaibleIconSize = [64, 72, 96]
+const avaibleColumnsCount = [20, 16, 12]
+
 export default function Home() {
   const [fontFamily, setFontFamily] = useState<Font>(availableFonts[0])
+  const [iconSize, setIconSize] = useState<number>(avaibleIconSize[0])
+  const [columnsCount, setColumnsCount] = useState<number>(avaibleColumnsCount[0])
 
   const changeFont = useCallback(() => {
     const currentIndex = availableFonts.findIndex((f) => f === fontFamily)
     const nextIndex = (currentIndex + 1) % availableFonts.length
-    setFontFamily(availableFonts[nextIndex])
+    const nextIconFont = availableFonts[nextIndex]
+
+    document.body.style.setProperty("--icon-font", `${nextIconFont.style}`)
+    setFontFamily(nextIconFont)
   }, [fontFamily])
 
   return (
     <div>
       <Header />
-      <main className="max-w-screen-xl mx-auto">
+      <main className="max-w-screen-xl mx-auto mb-20">
         <div className="flex font-mono text-sm mb-2 justify-between">
           <div></div>
-          <button onClick={changeFont}>Change font : {fontFamily.name}</button>
+          <div className="flex items-center space-x-3">
+            <button onClick={changeFont}>Change font : {fontFamily.name}</button>
+          </div>
         </div>
-        <div className={clsx("flex flex-wrap items-start", `${fontFamily.tw}`)}>
+        <div className={clsx("grid-wrapper")}>
           {characters.map((char, i) => (
             <Char key={"icon" + i} text={char} />
           ))}
