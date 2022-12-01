@@ -9,4 +9,5 @@ module.exports = {
     },
   },
   plugins: [],
+  presets: [require("tw-utils/font/inter/index")],
 }
