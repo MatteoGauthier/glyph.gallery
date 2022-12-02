@@ -55,7 +55,7 @@ export default function Home() {
       <SEO/>
       <Header />
       <main className="max-w-screen-xl mx-auto mb-20">
-        <div className="flex font-mono text-sm mb-2 justify-between">
+        <div className="flex xl:px-0 px-4 font-mono text-sm mb-2 justify-between">
           <div></div>
           <div className="flex items-center space-x-3">
             <button onClick={changeFont}>Change font : {fontFamily.name}</button>
@@ -67,8 +67,8 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <div className="bg-[#161616] py-20">
-        <p className="font-inter text-white mx-auto max-w-screen-xl text-justify text-xl">
+      <div className="bg-[#161616] xl:px-0 px-4 md:py-20 py-10">
+        <p className="font-inter text-white mx-auto max-w-screen-xl text-justify md:text-xl">
           <i>Glyph.gallery</i> is a web app to copy special characters simply, access and copy a wide range of special
           characters, such as emojis, symbols, and other non-standard characters. With this app, you can quickly copy
           arrows and paste them into their documents, messages, or other online content, without having to manually
@@ -81,6 +81,11 @@ export default function Home() {
           </a>
         </p>
       </div>
+      <footer className="bg-[#111] pt-4 pb-8">
+        <p className="text-white text-center ">
+          Made with ❤️ by <a href="https://twitter.com/MatteoGauthier_">Mattèo Gauthier</a>
+        </p>
+      </footer>
     </div>
   )
 }

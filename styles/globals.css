@@ -21,6 +21,12 @@
   grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
 }
 
+@media screen and (max-width: 640px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  }
+}
+
 .grid-wrapper .char {
   aspect-ratio: 1/1;
 }
