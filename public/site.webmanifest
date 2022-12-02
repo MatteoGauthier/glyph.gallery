@@ -1,0 +1,20 @@
+{
+    "name": "Glyph.gallery",
+    "short_name": "Glyph.gallery",
+    "description": "Copy and paste in a second special characters likes arrows, emoji, dots, etc...",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#161616",
+    "background_color": "#161616",
+    "display": "standalone"
+}
