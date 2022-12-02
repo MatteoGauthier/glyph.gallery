@@ -2,6 +2,7 @@ import clsx from "clsx"
 import { useCallback, useState } from "react"
 import Char from "../components/Char"
 import Header from "../components/Header"
+import SEO from "../components/SEO"
 import { characters } from "../utils/constants"
 
 type Font = {
@@ -51,6 +52,7 @@ export default function Home() {
 
   return (
     <div>
+      <SEO/>
       <Header />
       <main className="max-w-screen-xl mx-auto mb-20">
         <div className="flex font-mono text-sm mb-2 justify-between">
@@ -65,6 +67,20 @@ export default function Home() {
           ))}
         </div>
       </main>
+      <div className="bg-[#161616] py-20">
+        <p className="font-inter text-white mx-auto max-w-screen-xl text-justify text-xl">
+          <i>Glyph.gallery</i> is a web app to copy special characters simply, access and copy a wide range of special
+          characters, such as emojis, symbols, and other non-standard characters. With this app, you can quickly copy
+          arrows and paste them into their documents, messages, or other online content, without having to manually
+          search for and insert the characters themselves. This can save users time and effort. The app is designed to
+          be lightweight and easy to use, making it an ideal tool for anyone who needs to frequently use special
+          characters in their online communications. If you have any suggestions or feedback, please let me know on my
+          Twitter{" "}
+          <a className="text-blue-500 font-medium" href="https://twitter.com/MatteoGauthier_">
+            @MatteoGauthier_
+          </a>
+        </p>
+      </div>
     </div>
   )
 }
