@@ -81,7 +81,7 @@ export default function Home() {
       </div>
       <footer className="bg-[#111] pt-4 pb-8">
         <p className="text-white text-center ">
-          Made with ❤️ by <a href="https://twitter.com/MatteoGauthier_">Mattèo Gauthier</a>
+          Made with 🥛 by <a href="https://twitter.com/MatteoGauthier_">Mattèo Gauthier</a>
         </p>
       </footer>
     </div>
