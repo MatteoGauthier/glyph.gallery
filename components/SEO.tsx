@@ -11,6 +11,10 @@ const config: NextSeoProps = {
     siteName: "Glyph.gallery",
     url: "https://glyph.gallery",
     type: "website",
+    images: [
+      { url: "https://glyph.gallery/og.jpg", width: 1200, height: 600, alt: "Glyph.gallery" },
+      { url: "https://glyph.gallery/og-alt.jpg", width: 800, height: 600, alt: "Glyph.gallery alt" },
+    ],
 
     // title: "Glyph.gallery - Special characters, arrows, symbols, and more",
   },
