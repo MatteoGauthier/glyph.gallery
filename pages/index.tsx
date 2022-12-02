@@ -2,6 +2,7 @@ import clsx from "clsx"
 import { useCallback, useState } from "react"
 import Char from "../components/Char"
 import Header from "../components/Header"
+import SEO from "../components/SEO"
 import { characters } from "../utils/constants"
 
 type Font = {
@@ -51,6 +52,7 @@ export default function Home() {
 
   return (
     <div>
+      <SEO/>
       <Header />
       <main className="max-w-screen-xl mx-auto mb-20">
         <div className="flex font-mono text-sm mb-2 justify-between">
