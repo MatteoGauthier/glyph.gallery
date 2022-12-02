@@ -9,7 +9,7 @@ type Props = {}
 
 export default function Header({}: Props) {
   return (
-    <header className="h-72 header overflow-hidden relative mb-12">
+    <header className="h-72 bg-[#161616] header overflow-hidden relative mb-12">
       <div className="marquee-additional-style">
         <Marquee
           loop={0}
@@ -81,6 +81,8 @@ export default function Header({}: Props) {
       </div>
       <Image
         src={headerSrc}
+        priority
+        quality={70}
         style={{ objectFit: "cover" }}
         className="select-none touch-none pointer-events-none"
         draggable={false}
