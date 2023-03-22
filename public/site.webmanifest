@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "Glyph.gallery",
     "short_name": "Glyph.gallery",
     "description": "Copy and paste in a second special characters likes arrows, emoji, dots, etc...",
@@ -11,10 +12,13 @@
         {
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         }
     ],
     "theme_color": "#161616",
     "background_color": "#161616",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/",
+    "orientation": "portrait-primary"
 }
