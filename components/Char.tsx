@@ -16,7 +16,8 @@ export default function Char({ text }: Props) {
   }, [text])
 
   return (
-    <motion.div
+    <motion.button
+      data-char={text}
       whileHover={{ backgroundColor: "#000", color: "#fff" }}
       // whileTap={{ backgroundColor: "#111" }}
       transition={{ ease: [0, 1.14, 1, 1] }}
@@ -28,6 +29,6 @@ export default function Char({ text }: Props) {
       <span style={{ fontSize: "2rem" }} className={"text-md select-none"}>
         {text}
       </span>
-    </motion.div>
+    </motion.button>
   )
 }
