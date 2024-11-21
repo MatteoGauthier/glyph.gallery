@@ -8,11 +8,11 @@ export default function Document() {
         <Main />
         <NextScript />
         <noscript>
-          <img src="https://shynet-railway-production.up.railway.app/ingress/27311224-d936-4066-92a7-7041e3fcc239/pixel.gif" />
+          <img src="https://shynet.squale.dev/ingress/27311224-d936-4066-92a7-7041e3fcc239/pixel.gif" />
         </noscript>
         <script
           defer
-          src="https://shynet-railway-production.up.railway.app/ingress/27311224-d936-4066-92a7-7041e3fcc239/script.js"
+          src="https://shynet.squale.dev/ingress/27311224-d936-4066-92a7-7041e3fcc239/script.js"
         ></script>
       </body>
     </Html>
